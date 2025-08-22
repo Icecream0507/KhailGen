@@ -1,0 +1,29 @@
+# 数据集配置
+audio_folder: "/workspace/KhailGen-cloud/data/wav"
+processed_folder: "/workspace/KhailGen-cloud/data/processed"
+sample_rate: 22050
+waveform_length: 1323000  # 注意：你的原始代码中此处为空，我用 null 表示
+channels: 1
+
+# 模型配置
+timesteps: 2000
+unet_channels: [2, 64, 128, 256]
+embedding_dim: 128
+
+# wavenet
+res_channels: 256
+skip_channels: 256
+num_res_layers: 36
+dilation_cycle: 12
+
+# 训练配置
+batch_size: 2
+epochs: 500
+learning_rate: 0.0002
+
+# 模型位置
+model_folder: "/workspace/KhailGen-cloud/Khail/model"
+model_path: "/workspace/KhailGen-cloud/Khail/model/diffusion_best_model.pth"
+
+# 生成文件夹
+output_folder: "/workspace/KhailGen-cloud/Khail/output"
